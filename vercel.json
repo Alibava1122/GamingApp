@@ -1,0 +1,19 @@
+{
+    "routes":[
+       {
+        "src":"/" ,
+        "dist":"/"
+       },
+       {
+        "src":"/About" ,
+        "dist":"/"
+       },
+       {
+        "src":"/Services" ,
+        "dist":"/"
+       }, {
+        "src":"/payments" ,
+        "dist":"/"
+       }
+    ]
+}
