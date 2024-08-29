@@ -94,5 +94,40 @@ export const cards = [
     image: GameImage2,
     type: "Nylon",
     category: "Ruby"
-  }
+  },
+  {
+    id: 14,
+    GameName: "Juwa Adventure",
+    image: GameImage1,
+    type: "Juwa",
+    category: "Snake"
+  },
+  {
+    id: 15,
+    GameName: "Nylon Shooter",
+    image: GameImage4,
+    type: "Nylon",
+    category: "Cars"
+  },
+  {
+    id: 16,
+    GameName: "Juwa Puzzle",
+    image: GameImage3,
+    type: "Juwa",
+    category: "Poker"
+  },
+  {
+    id: 17,
+    GameName: "Nylon Racer",
+    image: GameImage4,
+    type: "Nylon",
+    category: "Raptor"
+  },
+  {
+    id: 18,
+    GameName: "Juwa Strategy",
+    image: GameImage1,
+    type: "Juwa",
+    category: "Joker"
+  },
 ];

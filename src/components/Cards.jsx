@@ -3,7 +3,7 @@ import GameImage from '../assets/2.jpeg';
 
 export default function Cards({ GameName, GameImages }) {
   return (
-    <div className='w-[250px] h-[180px] bg-gray-800 mt-3 rounded-lg text-white'>
+    <div  className='w-[250px] h-[180px] bg-gray-800 mt-3 rounded-lg text-white'>
       <div className='w-full h-[70%] bg-black rounded-lg'>
         <img src={GameImages} alt="GameImage" />
       </div>
