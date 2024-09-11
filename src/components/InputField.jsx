@@ -1,14 +1,17 @@
 import React from 'react'
 
-function InputField({placeholder  , id , type}) {
+function InputField({placeholder  , id , type , value , onChange , ...props}) {
   return (
     <input
     type={type}
     id={id}
-    className="w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-gray-500 focus:border-gray-500"
+    value={value}
+    onChange={onChange}
+    className=""
     placeholder={placeholder}
+    {...props}
   />
   )
 }
 
-export default InputField
+export default InputField;
