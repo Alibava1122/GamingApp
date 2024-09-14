@@ -1,7 +1,7 @@
 import React, { useState } from "react";
-import backgroundImage from '../assets/Image1.jpg';  // Import your background image
+import backgroundImage from '../assets/Image1.jpg'; 
 
-const PaymentForm = () => {
+const PaymentScreen = () => {
   const [formData, setFormData] = useState({
     cardName: "",
     cardNumber: "",
@@ -109,4 +109,4 @@ const PaymentForm = () => {
   );
 };
 
-export default PaymentForm;
+export default PaymentScreen;

@@ -19,12 +19,11 @@ function ChatUi({ toggleChatBox }) {
     const pusher = new Pusher('bc1c127c3d3422d5799a', {
       cluster: 'ap2',
     });
-
+//  const groupId = `${userInfo?.user._id}_${recieverId}`;
     const channel = pusher.subscribe('NewMessage');
     channel.bind('message', (data) => {
       setMessages((prevMessages) => [...prevMessages, data.message]);
     });
-    console.log('channel' , channel)
 
     return () => {
       pusher.unsubscribe('NewMessage');
@@ -49,7 +48,7 @@ function ChatUi({ toggleChatBox }) {
     };
 
     fetchChatHistory();
-  }, [chatHistory, userInfo, recieverId , newMessage ,]);
+  }, [chatHistory, userInfo, recieverId]);
 
   const sendMessage = async () => {
     if (!newMessage.trim()) return;

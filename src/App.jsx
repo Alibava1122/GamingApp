@@ -2,12 +2,11 @@ import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-route
 import { Provider } from 'react-redux'; 
 import MainScreen from './screens/MainScreen';
 import Navbar from './screens/Navbar';
-import PaymentForm from './components/PaymentForm';
 import About from './screens/About';
 import Services from './screens/Services';
 import SignUpScreen from './screens/SignUpLogin/SignUpScreen';
 import LoginScreen from './screens/SignUpLogin/LoginScreen';
-import FloatingButton from './components/FloatingButton';
+import PaymentScreen from './screens/PaymentScreen';
 import { store } from './redux/store';
 
 function App() {
@@ -22,7 +21,7 @@ function App() {
         <Route path="/" element={<MainScreen />} />
         <Route path="/About" element={<About />} />
         <Route path="/Services" element={<Services />} />
-        <Route path="/payments" element={<PaymentForm />} />
+        <Route path="/payments" element={<PaymentScreen />} />
         {/* Add Login and Signup Routes */}
         <Route path="/signup" element={<SignUpScreen />} />
         <Route path="/login" element={<LoginScreen />} />
