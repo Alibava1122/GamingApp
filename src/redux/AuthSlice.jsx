@@ -5,7 +5,8 @@ const AuthSlice = createSlice({
   name: 'user',
   initialState: {
     userInfo: null,
-    recieverId: null 
+    recieverId: null ,
+    setChatRoomDetails: null
   },
   reducers: {
     setUser: (state, action) => {
@@ -13,12 +14,15 @@ const AuthSlice = createSlice({
     },
     setRecieverId: (state , action) =>{
       state.recieverId = action.payload; 
+    },
+    setChatRoomDetails: (state , action) =>{
+      state.setChatRoomDetails = action.payload; 
     }
   },
 });
 
 
-export const { setUser , setRecieverId } = AuthSlice.actions;
+export const { setUser , setRecieverId , setChatRoomDetails } = AuthSlice.actions;
 
 
 export default AuthSlice.reducer;

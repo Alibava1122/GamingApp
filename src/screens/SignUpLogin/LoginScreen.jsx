@@ -8,9 +8,11 @@ import InputField from "../../components/InputField";
 import { useLoginUserMutation } from "../../services/AuthServices";
 import { useRefferalUserMutation } from "../../services/AuthServices";
 import { useDispatch } from "react-redux";
-import { setUser, setRecieverId } from "../../redux/AuthSlice";
+import { setUser, setRecieverId , setChatRoomDetails} from "../../redux/AuthSlice";
+import { useChatUserMutation } from "../../services/ChatServices";
 
 function LoginScreen({ closeLogin, setIsLoginVisible }) {
+  const [Chatfun] = useChatUserMutation();
   const dispatch = useDispatch();
   const [userLogin] = useLoginUserMutation();
   const [userRefferal] = useRefferalUserMutation();
@@ -46,7 +48,17 @@ function LoginScreen({ closeLogin, setIsLoginVisible }) {
         const referralCode = RefCode || "00000";
         const refcode = await userRefferal({ referralCode: referralCode });
         dispatch(setRecieverId(refcode?.data?.user?._id));
-        // console.log('refcode--->' , refcode?.data?.user?._id)
+        console.log('refcode--->' , refcode?.data)
+
+        const respons = await Chatfun({
+          receiverId: refcode?.data?.user?._id,
+          senderId: response?.user?._id,
+        });
+        if(!respons.error){
+          dispatch(setChatRoomDetails(respons))
+        }else{
+          console.log(err)
+        }
       }
 
       setIsLoginVisible(false);

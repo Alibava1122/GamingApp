@@ -45,7 +45,7 @@ export default function MainScreen() {
           <CategoryButton GameType={"Toker"} onClick={() => handleTypeClick("Toker")} />
         </div>
       );
-    } else if (selectedGame === "Nylon Games") {
+    } else if (selectedGame === "Orion Games") {
       return (
         <div className="mt-4 flex space-x-3">
           <CategoryButton GameType={"All"} onClick={() => handleTypeClick("All")} />
@@ -79,7 +79,7 @@ export default function MainScreen() {
             <Buttons name={"Juwa Games"} onClick={() => handleButtonClick("Juwa Games")} />
           </div>
           <div className="w-[120px] h-[50px]">
-            <Buttons name={"Nylon Games"} onClick={() => handleButtonClick("Nylon Games")} />
+            <Buttons name={"Orion Games"} onClick={() => handleButtonClick("Orion Games")} />
           </div>
         </div>
 
@@ -89,7 +89,9 @@ export default function MainScreen() {
         <div className="w-full flex flex-row flex-wrap gap-x-3 gap-y-3 items-center justify-center ">
           {filteredCards.map((card) => (
             <div key={card.id} onClick={handleCardClick}>
-              <Cards GameName={card.GameName} GameImages={card.image} />
+              <Cards 
+              // GameName={card.GameName}
+               GameImages={card.image} />
             </div>
           ))}
         </div>

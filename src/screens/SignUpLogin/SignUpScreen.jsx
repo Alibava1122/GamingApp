@@ -9,7 +9,7 @@ import {
 } from "../../services/AuthServices";
 import { useChatUserMutation } from "../../services/ChatServices";
 import { useDispatch } from "react-redux";
-import { setUser, setRecieverId } from "../../redux/AuthSlice";
+import { setUser, setRecieverId  , setChatRoomDetails} from "../../redux/AuthSlice";
 
 function SignUpScreen({ closeSignUp }) {
   const dispatch = useDispatch();
@@ -50,13 +50,14 @@ function SignUpScreen({ closeSignUp }) {
       // console.log('Response is here:', response?.user?._id);
       if (!response.error) {
         dispatch(setUser(response));
-        const responsive = await Chatfun({
+        const respons = await Chatfun({
           receiverId: values.adminId,
           senderId: response?.user?._id,
         });
-        //  console.log('responsiveresponsive' , responsive)
-        //  console.log('reciever id' , values.adminId)
+        console.log('responseee --->' , respons)
         dispatch(setRecieverId(values.adminId));
+        dispatch(setChatRoomDetails(respons))
+        
         closeSignUp(true);
       }
     } catch (error) {

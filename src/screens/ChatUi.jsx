@@ -12,22 +12,28 @@ function ChatUi({ toggleChatBox }) {
 
   const userInfo = useSelector((state) => state.user.userInfo);
   const recieverId = useSelector((state) => state.user.recieverId);
-  console.log('sender id' , userInfo?.user._id)
-  console.log('receiver id' , recieverId)
+  const ChatroomDeatils = useSelector((state)=>state.user.setChatRoomDetails);
+  // console.log('ChatroomDeatils id--->' , ChatroomDeatils?.data?.chat?._id
+  // )
+  // console.log('sender id' , userInfo?.user._id)
+  // console.log('receiver id' , recieverId)
+  console.log('message---->' , userInfo)
 
   useEffect(() => {
     const pusher = new Pusher('bc1c127c3d3422d5799a', {
       cluster: 'ap2',
     });
-//  const groupId = `${userInfo?.user._id}_${recieverId}`;
-    const channel = pusher.subscribe('NewMessage');
-    channel.bind('message', (data) => {
-      setMessages((prevMessages) => [...prevMessages, data.message]);
+
+    const channel = pusher.subscribe(ChatroomDeatils?.data?.chat?._id);
+    channel.bind('newMessage', (data) => {
+      if (data.senderId !== userInfo?.user._id) {
+        setMessages((prevMessages) => [...prevMessages, data]);
+      }
     });
 
     return () => {
-      pusher.unsubscribe('NewMessage');
-      pusher.disconnect();
+      channel.unbind_all();
+      pusher.unsubscribe(ChatroomDeatils?.data?.chat?._id);
     };
   }, []);
 
@@ -59,7 +65,6 @@ function ChatUi({ toggleChatBox }) {
         receiverId: recieverId, 
         message: newMessage,
       });
-
       setMessages((prevMessages) => [...prevMessages, response.data.message]);
       setNewMessage('');
     } catch (error) {

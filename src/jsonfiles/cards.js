@@ -1,7 +1,8 @@
-import GameImage1 from '../assets/2.jpeg';
-import GameImage2 from '../assets/3.jpeg';
-import GameImage3 from '../assets/4.jpeg';
-import GameImage4 from '../assets/5.jpeg';
+import GameImage1 from '../assets/Orion1.png';
+import GameImage2 from '../assets/Orion2.png';
+import GameImage3 from '../assets/Orion3.png';
+import GameImage4 from '../assets/Orion4.png';
+
 
 export const cards = [
   {
@@ -13,9 +14,9 @@ export const cards = [
   },
   {
     id: 2,
-    GameName: "Nylon Shooter",
+    GameName: "Orion Shooter",
     image: GameImage4,
-    type: "Nylon",
+    type: "Orion",
     category: "Cars"
   },
   {
@@ -27,9 +28,9 @@ export const cards = [
   },
   {
     id: 4,
-    GameName: "Nylon Racer",
+    GameName: "Orion Racer",
     image: GameImage4,
-    type: "Nylon",
+    type: "Orion",
     category: "Raptor"
   },
   {
@@ -41,9 +42,9 @@ export const cards = [
   },
   {
     id: 6,
-    GameName: "Nylon Adventure",
+    GameName: "Orion Adventure",
     image: GameImage2,
-    type: "Nylon",
+    type: "Orion",
     category: "Ruby"
   },
   {
@@ -55,9 +56,9 @@ export const cards = [
   },
   {
     id: 8,
-    GameName: "Nylon Quest",
+    GameName: "Orion Quest",
     image: GameImage2,
-    type: "Nylon",
+    type: "Orion",
     category: "Jacie"
   },
   {
@@ -69,16 +70,16 @@ export const cards = [
   },
   {
     id: 10,
-    GameName: "Nylon Combat",
+    GameName: "Orion Combat",
     image: GameImage1,
-    type: "Nylon",
+    type: "Orion",
     category: "Cars"
   },
   {
     id: 11,
-    GameName: "Nylon Quest",
+    GameName: "Orion Quest",
     image: GameImage4,
-    type: "Nylon",
+    type: "Orion",
     category: "Raptor"
   },
   {
@@ -90,9 +91,9 @@ export const cards = [
   },
   {
     id: 13,
-    GameName: "Nylon Combat",
+    GameName: "Orion Combat",
     image: GameImage2,
-    type: "Nylon",
+    type: "Orion",
     category: "Ruby"
   },
   {
@@ -104,9 +105,9 @@ export const cards = [
   },
   {
     id: 15,
-    GameName: "Nylon Shooter",
+    GameName: "Orion Shooter",
     image: GameImage4,
-    type: "Nylon",
+    type: "Orion",
     category: "Cars"
   },
   {
@@ -118,9 +119,9 @@ export const cards = [
   },
   {
     id: 17,
-    GameName: "Nylon Racer",
+    GameName: "Orion Racer",
     image: GameImage4,
-    type: "Nylon",
+    type: "Orion",
     category: "Raptor"
   },
   {
