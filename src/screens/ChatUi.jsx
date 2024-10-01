@@ -15,8 +15,8 @@ function ChatUi({ toggleChatBox }) {
   const ChatroomDeatils = useSelector((state)=>state.user.setChatRoomDetails);
   // console.log('ChatroomDeatils id--->' , ChatroomDeatils?.data?.chat?._id
   // )
-  // console.log('sender id' , userInfo?.user._id)
-  // console.log('receiver id' , recieverId)
+  console.log('sender id' , userInfo?.user._id)
+  console.log('receiver id' , recieverId)
   console.log('message---->' , userInfo)
 
   useEffect(() => {
@@ -73,8 +73,8 @@ function ChatUi({ toggleChatBox }) {
   };
 
   return (
-    <div className="bg-white p-4 w-96 max-w-lg h-110 rounded-lg shadow-lg mb-2">
-      <div className="flex justify-between items-center mb-2">
+    <div className="bg-white p-4 w-96 max-w-lg h-110 rounded-lg shadow-lg mb-2 ">
+      <div className="flex justify-between items-center mb-2 ">
         <h3 className="font-semibold text-gray-700">Chat with us</h3>
         <button
           className="text-gray-500 hover:text-gray-700"

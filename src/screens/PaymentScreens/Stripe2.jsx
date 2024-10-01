@@ -113,7 +113,7 @@ const CheckoutForm = () => {
       <button
         type="submit"
         disabled={!stripe}
-        className="w-full bg-blue-600 text-white py-2 px-4 rounded-lg hover:bg-blue-700 transition-colors"
+        className="w-full  text-white py-2 px-4 rounded-lg bg-gradient-to-r from-yellow-400 via-yellow-400 to-yellow-600 transition-colors"
       >
         Pay Now
       </button>

@@ -73,11 +73,11 @@ function SignUpScreen({ closeSignUp }) {
         className="absolute inset-0 bg-black opacity-50"
         onClick={closeSignUp}
       ></div>
-      <div className="bg-white p-8 rounded-lg shadow-lg w-full max-w-md z-10">
+      <div className="bg-black p-8 rounded-lg shadow-lg w-full max-w-md z-10 border border-yellow-500">
         <div className="mb-5 text-center">
-          <p className="font-bold text-gray-900 text-2xl">Gaming Pro App</p>
+          <p className="font-bold text-white text-2xl">Gaming Pro App</p>
         </div>
-        <h2 className="text-2xl font-bold mb-6 text-center">Sign Up</h2>
+        <h2 className="text-2xl text-white font-bold mb-6 text-center">Sign Up</h2>
         <Formik
           initialValues={{
             username: "",
@@ -93,13 +93,13 @@ function SignUpScreen({ closeSignUp }) {
             <Form>
               <div className="mb-4">
                 <label
-                  className="block text-gray-700 text-sm font-bold mb-2"
+                  className="block text-white text-sm font-bold mb-2"
                   htmlFor="username"
                 >
                   Username
                 </label>
                 <Field
-                  className="w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-gray-500 focus:border-gray-500"
+                  className="w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-yellow-500 focus:border-yellow-500"
                   name="username"
                   type="text"
                   as={InputField}
@@ -113,13 +113,13 @@ function SignUpScreen({ closeSignUp }) {
               </div>
               <div className="mb-4">
                 <label
-                  className="block text-gray-700 text-sm font-bold mb-2"
+                  className="block text-white text-sm font-bold mb-2"
                   htmlFor="email"
                 >
                   Email Address
                 </label>
                 <Field
-                  className="w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-gray-500 focus:border-gray-500"
+                  className="w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-yellow-500 focus:border-yellow-500"
                   name="email"
                   type="email"
                   as={InputField}
@@ -133,13 +133,13 @@ function SignUpScreen({ closeSignUp }) {
               </div>
               <div className="mb-4">
                 <label
-                  className="block text-gray-700 text-sm font-bold mb-2"
+                  className="block text-white text-sm font-bold mb-2"
                   htmlFor="password"
                 >
                   Password
                 </label>
                 <Field
-                  className="w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-gray-500 focus:border-gray-500"
+                  className="w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-yellow-500 focus:border-yellow-500"
                   name="password"
                   type="password"
                   as={InputField}
@@ -153,13 +153,13 @@ function SignUpScreen({ closeSignUp }) {
               </div>
               <div className="mb-6">
                 <label
-                  className="block text-gray-700 text-sm font-bold mb-2"
+                  className="block text-white text-sm font-bold mb-2"
                   htmlFor="confirmPassword"
                 >
                   Confirm Password
                 </label>
                 <Field
-                  className="w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-gray-500 focus:border-gray-500"
+                  className="w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-yellow-500 focus:border-yellow-500"
                   name="confirmPassword"
                   type="password"
                   as={InputField}
@@ -173,7 +173,7 @@ function SignUpScreen({ closeSignUp }) {
               </div>
               <div className="mb-4">
                 <label
-                  className="block text-gray-700 text-sm font-bold mb-2"
+                  className="block text-white text-sm font-bold mb-2"
                   htmlFor="adminId"
                 >
                   Select Admin
@@ -181,7 +181,7 @@ function SignUpScreen({ closeSignUp }) {
                 <Field
                   as="select"
                   name="adminId"
-                  className="w-full h-[40px] px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-gray-500 focus:border-gray-500"
+                  className="w-full h-[40px] px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-yellow-500 focus:border-yellow-500"
                 >
                   <option value="" disabled>
                     Select Admin
@@ -206,7 +206,7 @@ function SignUpScreen({ closeSignUp }) {
                 />
               </div>
               <div className="w-full text-center mt-2">
-                <p className="text-sm font-light text-gray-500">
+                <p className="text-sm font-light text-white">
                   Already have an account?{" "}
                   <span
                     onClick={closeSignUp}

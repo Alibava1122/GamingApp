@@ -18,7 +18,26 @@ export const StripePaymentApi = createApi({
           };
         },
       }),
+      PaypalPayment: builder.mutation({
+        query: (body) => {
+          return {
+            url: '/payment/paypal',
+            method: 'POST',
+            body,
+          };
+        },
+      }),
+      SquarePayment: builder.mutation({
+        query: (body) => {
+          return {
+            url: '/square/payment',
+            method: 'POST',
+            body,
+          };
+        },
+      }),
+
     }),
   });
   
-  export const { useStripePaymentMutation } = StripePaymentApi;
+  export const { useStripePaymentMutation , usePaypalPaymentMutation ,useSquarePaymentMutation } = StripePaymentApi;

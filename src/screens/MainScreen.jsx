@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import backgroundImage from "../assets/Image1.jpg";
+import backgroundImage from "../assets/golden.jpg";
 import Buttons from "../components/Buttons";
 import CategoryButton from "../components/CategoryButton";
 import Cards from "../components/Cards";
@@ -37,22 +37,22 @@ export default function MainScreen() {
   const renderCategories = () => {
     if (selectedGame === "Juwa Games") {
       return (
-        <div className="mt-4 flex space-x-3">
-          <CategoryButton GameType={"All"} onClick={() => handleTypeClick("All")} />
-          <CategoryButton GameType={"Snake"} onClick={() => handleTypeClick("Snake")} />
-          <CategoryButton GameType={"Poker"} onClick={() => handleTypeClick("Poker")} />
-          <CategoryButton GameType={"Joker"} onClick={() => handleTypeClick("Joker")} />
-          <CategoryButton GameType={"Toker"} onClick={() => handleTypeClick("Toker")} />
+        <div className="mt-4 flex space-x-4">
+          <CategoryButton GameType={"All"} onClick={() => handleTypeClick("All")} isSelected={selectedType === "All"}  />
+          <CategoryButton GameType={"Snake"} onClick={() => handleTypeClick("Snake")} isSelected={selectedType === "snake"}  />
+          <CategoryButton GameType={"Poker"} onClick={() => handleTypeClick("Poker")}  isSelected={selectedType === "Poker"} />
+          <CategoryButton GameType={"Joker"} onClick={() => handleTypeClick("Joker")}  isSelected={selectedType === "Joker"} />
+          <CategoryButton GameType={"Toker"} onClick={() => handleTypeClick("Toker")} isSelected={selectedType === "Toker"} />
         </div>
       );
     } else if (selectedGame === "Orion Games") {
       return (
-        <div className="mt-4 flex space-x-3">
-          <CategoryButton GameType={"All"} onClick={() => handleTypeClick("All")} />
-          <CategoryButton GameType={"Cars"} onClick={() => handleTypeClick("Cars")} />
-          <CategoryButton GameType={"Raptor"} onClick={() => handleTypeClick("Raptor")} />
-          <CategoryButton GameType={"Ruby"} onClick={() => handleTypeClick("Ruby")} />
-          <CategoryButton GameType={"Jacie"} onClick={() => handleTypeClick("Jacie")} />
+        <div className="mt-4 flex space-x-4">
+          <CategoryButton GameType={"All"} onClick={() => handleTypeClick("All")} isSelected={selectedType === "All"} />
+          <CategoryButton GameType={"Cars"} onClick={() => handleTypeClick("Cars")} isSelected={selectedType === "Cars"}  />
+          <CategoryButton GameType={"Raptor"} onClick={() => handleTypeClick("Raptor")}   isSelected={selectedType === "Raptor"}/>
+          <CategoryButton GameType={"Ruby"} onClick={() => handleTypeClick("Ruby")} isSelected={selectedType === "Ruby"} />
+          <CategoryButton GameType={"Jacie"} onClick={() => handleTypeClick("Jacie")}  isSelected={selectedType === "Jacie"}/>
         </div>
       );
     }
@@ -74,21 +74,21 @@ export default function MainScreen() {
           minHeight: "100vh",
         }}
       >
-        <div className="flex space-x-3 relative z-10 mt-4">
-          <div className="w-[120px] h-[50px]">
-            <Buttons name={"Juwa Games"} onClick={() => handleButtonClick("Juwa Games")} />
+        <div className="flex space-x-5 relative z-10 mt-4">
+          <div className="w-[110px] h-[50px]">
+            <Buttons name={"Juwa Games"} onClick={() => handleButtonClick("Juwa Games")} isSelected={selectedGame === "Juwa Games"}/>
           </div>
-          <div className="w-[120px] h-[50px]">
-            <Buttons name={"Orion Games"} onClick={() => handleButtonClick("Orion Games")} />
+          <div className="w-[110px] h-[50px]">
+            <Buttons name={"Orion Games"} onClick={() => handleButtonClick("Orion Games")} isSelected={selectedGame === "Orion Games"} />
           </div>
         </div>
 
         <div className="mt-7">
           {renderCategories()}
         </div>
-        <div className="w-full flex flex-row flex-wrap gap-x-3 gap-y-3 items-center justify-center ">
+        <div className="w-full flex flex-row flex-wrap gap-x-4 gap-y-3 items-center justify-center ">
           {filteredCards.map((card) => (
-            <div key={card.id} onClick={handleCardClick}>
+            <div key={card.id} onClick={handleCardClick}  className="card-container hover:scale-110 transition-transform duration-200 ease-in-out" >
               <Cards 
               // GameName={card.GameName}
                GameImages={card.image} />

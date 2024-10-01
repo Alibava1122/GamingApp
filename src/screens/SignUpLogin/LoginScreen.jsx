@@ -80,9 +80,9 @@ function LoginScreen({ closeLogin, setIsLoginVisible }) {
             onClick={closeLogin}
           ></div>
 
-          <div className="bg-white p-8 rounded-lg shadow-lg w-full max-w-md z-10">
+          <div className="bg-black p-8 rounded-lg shadow-lg w-full max-w-md z-10 border border-yellow-500 ">
             <div className="mb-5 text-center">
-              <p className="font-bold text-gray-900 text-2xl">Gaming Pro App</p>
+              <p className="font-bold text-white text-2xl">Gaming Pro App</p>
             </div>
             <Formik
               initialValues={{ email: "", password: "", RefCode: "" }}
@@ -93,13 +93,13 @@ function LoginScreen({ closeLogin, setIsLoginVisible }) {
                 <Form>
                   <div className="mb-4">
                     <label
-                      className="block text-gray-700 text-sm font-bold mb-2"
+                      className="block text-white text-sm font-bold mb-2"
                       htmlFor="email"
                     >
                       Email Address
                     </label>
                     <Field
-                      className="w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-gray-500 focus:border-gray-500"
+                      className="w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-yellow-500 focus:border-yellow-500"
                       name="email"
                       type="email"
                       as={InputField}
@@ -113,13 +113,13 @@ function LoginScreen({ closeLogin, setIsLoginVisible }) {
                   </div>
                   <div className="mb-6">
                     <label
-                      className="block text-gray-700 text-sm font-bold mb-2"
+                      className="block text-white text-sm font-bold mb-2"
                       htmlFor="password"
                     >
                       Password
                     </label>
                     <Field
-                      className="w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-gray-500 focus:border-gray-500"
+                      className="w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-yellow-500 focus:border-yellow-500"
                       name="password"
                       type="password"
                       as={InputField}
@@ -133,13 +133,13 @@ function LoginScreen({ closeLogin, setIsLoginVisible }) {
                   </div>
                   <div className="mb-6">
                     <label
-                      className="block text-gray-700 text-sm font-bold mb-2"
+                      className="block text-white text-sm font-bold mb-2"
                       htmlFor="password"
                     >
                       Referral code
                     </label>
                     <Field
-                      className="w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-gray-500 focus:border-gray-500"
+                      className="w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-yellow-500 focus:border-yellow-500"
                       name="RefCode"
                       type="RefCode"
                       as={InputField}
@@ -159,7 +159,7 @@ function LoginScreen({ closeLogin, setIsLoginVisible }) {
                     />
                   </div>
                   <div className="w-full text-center mt-2">
-                    <p className="text-sm font-light text-gray-500">
+                    <p className="text-sm font-light text-white">
                       Don’t have an account yet?{" "}
                       <span
                         onClick={showSignUp}
