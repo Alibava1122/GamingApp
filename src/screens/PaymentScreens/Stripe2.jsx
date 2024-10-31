@@ -88,17 +88,17 @@ const CheckoutForm = () => {
   return (
     <form onSubmit={handleSubmit}>
       <div className="mb-4">
-        <label htmlFor="card-element" className="block text-gray-700 font-semibold mb-2">
+        <label htmlFor="card-element" className="block text-[#ceb75d] font-semibold mb-2">
           Credit or Debit Card
         </label>
         <CardElement
           id="card-element"
           options={CARD_ELEMENT_OPTIONS}
-          className="p-4 border rounded-lg border-gray-300 focus:border-blue-500 transition-colors"
+          className="p-4 border rounded-lg border-[#ceb75d] focus:border=[#ceb75d] transition-colors"
         />
       </div>
       <div className="mb-4">
-        <label htmlFor="amount" className="block text-gray-700 font-semibold mb-2">
+        <label htmlFor="amount" className="block text-[#ceb75d] font-semibold mb-2">
           Amount
         </label>
         <input
@@ -106,14 +106,14 @@ const CheckoutForm = () => {
           id="amount"
           value={amount}
           onChange={(e) => setAmount(e.target.value)}
-          className="p-4 border rounded-lg border-gray-300 focus:border-blue-500 transition-colors w-full"
+          className="p-4 border rounded-lg border-[#ceb75d] focus:border-[#ceb75d] transition-colors w-full"
           placeholder="Enter amount"
         />
       </div>
       <button
         type="submit"
         disabled={!stripe}
-        className="w-full  text-white py-2 px-4 rounded-lg bg-gradient-to-r from-yellow-400 via-yellow-400 to-yellow-600 transition-colors"
+        className="w-full  text-white py-2 px-4 rounded-lg bg-[#ceb75d] hover:bg-[#8d7f47] transition-colors"
       >
         Pay Now
       </button>

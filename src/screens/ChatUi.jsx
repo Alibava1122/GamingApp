@@ -1,10 +1,13 @@
 import React, { useEffect, useState } from 'react';
 import Pusher from 'pusher-js';
 import axios from 'axios';
-import { useSelector } from 'react-redux';
+import { useSelector , useDispatch } from 'react-redux';
 import { useChatHistoryMutation, useSendMessageMutation} from '../services/ChatServices';
+import { hideChatModal } from '../redux/uiSlice';
 
-function ChatUi({ toggleChatBox }) {
+
+function ChatUi() {
+  const dispatch = useDispatch();
   const [messages, setMessages] = useState([]);
   const [newMessage, setNewMessage] = useState('');
   const [MessageSend] = useSendMessageMutation();
@@ -75,10 +78,10 @@ function ChatUi({ toggleChatBox }) {
   return (
     <div className="bg-white p-4 w-96 max-w-lg h-110 rounded-lg shadow-lg mb-2 ">
       <div className="flex justify-between items-center mb-2 ">
-        <h3 className="font-semibold text-gray-700">Chat with us</h3>
+        <h3 className="font-semibold text-gray-700 text-sm">Chat with us</h3>
         <button
           className="text-gray-500 hover:text-gray-700"
-          onClick={toggleChatBox}
+          onClick={()=>{dispatch(hideChatModal())}}
         >
           ✕
         </button>
@@ -100,12 +103,12 @@ function ChatUi({ toggleChatBox }) {
           type="text"
           value={newMessage}
           onChange={(e) => setNewMessage(e.target.value)}
-          className="w-full px-3 py-2 mt-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-gray-500"
+          className="w-full px-3 py-2 mt-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-gray-500 placeholder:text-[14px]"
           placeholder="Type a message..."
         />
         <button
           onClick={sendMessage}
-          className="bg-gray-600 hover:bg-slate-500 px-1 py-1 rounded-lg text-white h-[40px] mt-2 ml-2"
+          className="bg-gray-600 hover:bg-slate-500 px-1 py-1 rounded-lg text-white h-[40px] mt-2 ml-2  text-sm"
         >
           Send
         </button>

@@ -46,24 +46,24 @@ function SquarePayment() {
     <h2 className="text-2xl font-bold text-center mb-4">Enter Your Details</h2>
     <form className="space-y-4">
       <div>
-        <label className="block text-gray-700">Given Name</label>
+        <label className="block text-[#ceb75d]">Given Name</label>
         <input 
           type="text" 
           name="givenName" 
           value={userDetails.givenName} 
           onChange={handleInputChange} 
-          className="mt-1 p-2 border border-gray-300 rounded-md w-full focus:outline-none focus:ring-2 focus:ring-yellow-400" 
+          className="mt-1 p-2 border border-[#ceb75d] rounded-md w-full focus:outline-none focus:ring-2 focus:ring-yellow-400 placeholder:text-[#ceb75d]" 
           placeholder="John"
         />
       </div>
       <div>
-        <label className="block text-gray-700">Family Name</label>
+        <label className="block text-[#ceb75d]">Family Name</label>
         <input 
           type="text" 
           name="familyName" 
           value={userDetails.familyName} 
           onChange={handleInputChange} 
-          className="mt-1 p-2 border border-gray-300 rounded-md w-full focus:outline-none focus:ring-2 focus:ring-yellow-400" 
+          className="mt-1 p-2 border border-[#ceb75d] rounded-md w-full focus:outline-none focus:ring-2 focus:ring-yellow-400 placeholder:text-[#ceb75d]" 
           placeholder="Doe"
         />
       </div>
@@ -74,7 +74,7 @@ function SquarePayment() {
           name="address" 
           value={userDetails.address} 
           onChange={handleInputChange} 
-          className="mt-1 p-2 border border-gray-300 rounded-md w-full focus:outline-none focus:ring-2 focus:ring-yellow-400" 
+          className="mt-1 p-2 border border-[#ceb75d] rounded-md w-full focus:outline-none focus:ring-2 focus:ring-yellow-400 placeholder:text-[#ceb75d]" 
           placeholder="123 Main Street"
         />
       </div>
@@ -85,7 +85,7 @@ function SquarePayment() {
             name="apartment" 
             value={userDetails.apartment} 
             onChange={handleInputChange} 
-            className="mt-1 p-2 border border-gray-300 rounded-md w-full focus:outline-none focus:ring-2 focus:ring-yellow-400" 
+            className="mt-1 p-2 border border-[#ceb75d] rounded-md w-full focus:outline-none focus:ring-2 focus:ring-yellow-400 placeholder:text-[#ceb75d]" 
             placeholder="Apartment 2"
           />
         </div>
@@ -97,18 +97,18 @@ function SquarePayment() {
           name="city" 
           value={userDetails.city} 
           onChange={handleInputChange} 
-          className="mt-1 p-2 border border-gray-300 rounded-md w-full focus:outline-none focus:ring-2 focus:ring-yellow-400" 
+          className="mt-1 p-2 border border-[#ceb75d] rounded-md w-full focus:outline-none focus:ring-2 focus:ring-yellow-400 placeholder:text-[#ceb75d]" 
           placeholder="London"
         />
       </div>
       <div>
-        <label className="block text-gray-700">Country Code</label>
+        <label className="block text-[#ceb75d]">Country Code</label>
         <input 
           type="text" 
           name="countryCode" 
           value={userDetails.countryCode} 
           onChange={handleInputChange} 
-          className="mt-1 p-2 border border-gray-300 rounded-md w-full focus:outline-none focus:ring-2 focus:ring-yellow-400" 
+          className="mt-1 p-2 border border-[#ceb75d] rounded-md w-full focus:outline-none focus:ring-2 focus:ring-yellow-400 placeholder:text-[#ceb75d]" 
           placeholder="GB"
         />
       </div>
@@ -119,7 +119,7 @@ function SquarePayment() {
             name="Amount" 
             value={userDetails.Amount} 
             onChange={handleInputChange} 
-            className="mt-1 p-2 border border-gray-300 rounded-md w-full focus:outline-none focus:ring-2 focus:ring-yellow-400" 
+            className="mt-1 p-2 border border-[#ceb75d] rounded-md w-full focus:outline-none focus:ring-2 focus:ring-yellow-400 placeholder:text-[#ceb75d]" 
             placeholder="Add Amount"
           />
         </div>

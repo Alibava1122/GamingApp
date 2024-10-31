@@ -6,11 +6,13 @@ const AuthSlice = createSlice({
   initialState: {
     userInfo: null,
     recieverId: null ,
-    setChatRoomDetails: null
+    setChatRoomDetails: null,
+    isLogedIn: false,
   },
   reducers: {
     setUser: (state, action) => {
       state.userInfo = action.payload; 
+      state.isLogedIn = !!action.payload; 
     },
     setRecieverId: (state , action) =>{
       state.recieverId = action.payload; 

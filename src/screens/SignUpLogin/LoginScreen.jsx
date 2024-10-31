@@ -7,24 +7,28 @@ import SignUpScreen from "./SignUpScreen";
 import InputField from "../../components/InputField";
 import { useLoginUserMutation } from "../../services/AuthServices";
 import { useRefferalUserMutation } from "../../services/AuthServices";
-import { useDispatch } from "react-redux";
+import { useDispatch ,useSelector } from "react-redux";
 import { setUser, setRecieverId , setChatRoomDetails} from "../../redux/AuthSlice";
 import { useChatUserMutation } from "../../services/ChatServices";
+import { showSignUpModal, hideLoginModal , hideSignUpModal} from '../../redux/uiSlice'; 
 
-function LoginScreen({ closeLogin, setIsLoginVisible }) {
+
+function LoginScreen({ closeLogin, }) {
   const [Chatfun] = useChatUserMutation();
   const dispatch = useDispatch();
   const [userLogin] = useLoginUserMutation();
   const [userRefferal] = useRefferalUserMutation();
-  const [isSignUpVisible, setIsSignUpVisible] = useState(false);
+  const isSignUpVisible = useSelector((state) => state.ui.isSignUpModalVisible);
+  const [LoginErrorMessage , setLoginErrorMessage] = useState('');
 
   const showSignUp = () => {
-    setIsSignUpVisible(true);
+    dispatch(showSignUpModal());
+    dispatch(hideLoginModal());
   };
 
   const closeSignUp = () => {
-    setIsSignUpVisible(false);
-    setIsLoginVisible(false);
+    dispatch(hideSignUpModal());
+    dispatch(hideLoginModal());
   };
 
   const validationSchema = Yup.object({
@@ -58,12 +62,15 @@ function LoginScreen({ closeLogin, setIsLoginVisible }) {
           dispatch(setChatRoomDetails(respons))
         }else{
           console.log(err)
+          
         }
       }
 
-      setIsLoginVisible(false);
+      dispatch(hideLoginModal())
     } catch (error) {
-      console.error("Login Failed:", error);
+      console.error("Login Failed:", error?.data?.message);
+      setLoginErrorMessage(error?.data?.message)
+     
     } finally {
       setSubmitting(false);
     }
@@ -80,9 +87,9 @@ function LoginScreen({ closeLogin, setIsLoginVisible }) {
             onClick={closeLogin}
           ></div>
 
-          <div className="bg-black p-8 rounded-lg shadow-lg w-full max-w-md z-10 border border-yellow-500 ">
+          <div className="bg-black p-8 rounded-lg shadow-lg w-full max-w-md z-10 border border-zinc-500 ">
             <div className="mb-5 text-center">
-              <p className="font-bold text-white text-2xl">Gaming Pro App</p>
+              <p className="font-bold text-white text-xl">Gaming Pro App</p>
             </div>
             <Formik
               initialValues={{ email: "", password: "", RefCode: "" }}
@@ -93,17 +100,17 @@ function LoginScreen({ closeLogin, setIsLoginVisible }) {
                 <Form>
                   <div className="mb-4">
                     <label
-                      className="block text-white text-sm font-bold mb-2"
+                      className="block text-white text-[13px] font-bold mb-2"
                       htmlFor="email"
                     >
                       Email Address
                     </label>
                     <Field
-                      className="w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-yellow-500 focus:border-yellow-500"
+                      className="w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-zinc-500 focus:border-zinc-500 placeholder:text-[13px]"
                       name="email"
                       type="email"
                       as={InputField}
-                      placeholder="Enter your email"
+                      placeholder="Enter your Email"
                     />
                     <ErrorMessage
                       name="email"
@@ -113,17 +120,18 @@ function LoginScreen({ closeLogin, setIsLoginVisible }) {
                   </div>
                   <div className="mb-6">
                     <label
-                      className="block text-white text-sm font-bold mb-2"
+                      className="block text-white text-[13px] font-bold mb-2"
                       htmlFor="password"
                     >
                       Password
                     </label>
                     <Field
-                      className="w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-yellow-500 focus:border-yellow-500"
+                      className="w-full px-3 py-2  border rounded-lg focus:outline-none focus:ring-2 focus:ring-zinc-500 focus:border-zinc-500 placeholder:text-[13px]"
                       name="password"
                       type="password"
                       as={InputField}
                       placeholder="Enter your password"
+                      
                     />
                     <ErrorMessage
                       name="password"
@@ -133,13 +141,13 @@ function LoginScreen({ closeLogin, setIsLoginVisible }) {
                   </div>
                   <div className="mb-6">
                     <label
-                      className="block text-white text-sm font-bold mb-2"
+                      className="block text-white text-[13px] font-bold mb-2"
                       htmlFor="password"
                     >
                       Referral code
                     </label>
                     <Field
-                      className="w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-yellow-500 focus:border-yellow-500"
+                      className="w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-zinc-500 focus:border-zinc-500 placeholder:text-[13px]"
                       name="RefCode"
                       type="RefCode"
                       as={InputField}
@@ -158,8 +166,9 @@ function LoginScreen({ closeLogin, setIsLoginVisible }) {
                       name={"Sign In"}
                     />
                   </div>
+                 <div className="w-full flex items-center justify-center"> <p className="text-red-500 text-sm mt-1">{LoginErrorMessage}</p></div>
                   <div className="w-full text-center mt-2">
-                    <p className="text-sm font-light text-white">
+                    <p className="text-[12px] font-light text-white">
                       Don’t have an account yet?{" "}
                       <span
                         onClick={showSignUp}

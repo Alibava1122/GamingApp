@@ -41,25 +41,25 @@ function PaypalScreen() {
   return (
     <div className="flex flex-col p-2 gap-y-3">
       <div>
-        <label className="block text-black text-sm font-bold mb-2 ">
+        <label className="block text-[#ceb75d] text-sm font-bold mb-2 ">
           Enter Amount
         </label>
         <input
           type="number"
           value={amount}
           onChange={handleAmountChange}
-          className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+          className="shadow appearance-none border rounded w-full py-2 px-3 text-[#ceb75d] leading-tight focus:outline-none focus:shadow-outline"
           placeholder="Enter amount in USD"
         />
       </div>
       <div>
-        <label className="block text-black text-sm font-bold mb-2">
+        <label className="block text-[#ceb75d] text-sm font-bold mb-2">
           Currency
         </label>
         <select
           value={currency}
           onChange={handleCurrencyChange}
-          className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+          className="shadow appearance-none border rounded w-full py-2 px-3 text-[#ceb75d] leading-tight focus:outline-none focus:shadow-outline"
         >
           <option value="USD">USD - US Dollar</option>
         </select>
@@ -67,7 +67,7 @@ function PaypalScreen() {
       <div>
         <button
           onClick={sendButton}
-          className={` p-3 text-sm w-full h-full text-white font-bold rounded bg-gradient-to-r from-yellow-300 via-yellow-400 to-yellow-500 hover:from-yellow-500 hover:via-yellow-600 hover:to-yellow-700
+          className={` p-3 text-sm w-full h-full text-white font-bold rounded bg-[#ceb75d] hover:bg-[#a79a66]
      transform transition-all duration-300 ease-in-out
     
      `}

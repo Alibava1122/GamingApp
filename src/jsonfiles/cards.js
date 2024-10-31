@@ -29,7 +29,8 @@ export const cards = [
     GameName: "Orion Shooter",
     image: GameImage2,
     type: "Orion",
-    category: "Cars"
+    category: "Cars",
+    Importance:'EXCLUSIVE'
   },
   {
     id: 3,
@@ -50,7 +51,8 @@ export const cards = [
     GameName: "Juwa Strategy",
     image: GameImage5,
     type: "Juwa",
-    category: "Joker"
+    category: "Joker",
+    Importance:'EXCLUSIVE'
   },
   {
     id: 6,
@@ -64,7 +66,8 @@ export const cards = [
     GameName: "Juwa Combat",
     image: GameImage7,
     type: "Juwa",
-    category: "Toker"
+    category: "Toker",
+    Importance:'EXCLUSIVE'
   },
   {
     id: 8,
@@ -85,7 +88,8 @@ export const cards = [
     GameName: "Orion Combat",
     image: GameImage10,
     type: "Orion",
-    category: "Cars"
+    category: "Cars",
+    Importance:'EXCLUSIVE'
   },
   {
     id: 11,
@@ -106,7 +110,8 @@ export const cards = [
     GameName: "Orion Combat",
     image: GameImage13,
     type: "Orion",
-    category: "Ruby"
+    category: "Ruby",
+    Importance:'EXCLUSIVE'
   },
   {
     id: 14,

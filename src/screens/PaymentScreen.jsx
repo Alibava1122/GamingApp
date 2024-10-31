@@ -29,15 +29,10 @@ const PaymentScreen = () => {
 
   return (
     <div
-      className="min-h-screen flex flex-col items-center "
-      style={{
-        backgroundImage: `url(${backgroundImage})`,
-        backgroundSize: "cover",
-        backgroundPosition: "center",
-      }}
+      className="min-h-screen flex flex-col items-center bg-[#050508] "
     >
-      <div className="bg-gradient-to-r from-yellow-400 via-yellow-400 to-yellow-600 backdrop-blur-md p-6 rounded-lg shadow-xl mt-4">
-        <h1 className="text-4xl font-bold mb-6 text-center text-white">
+      <div className=" border border-[#ceb75d] backdrop-blur-md p-6 rounded-lg shadow-xl mt-4 bg-white">
+        <h1 className="text-4xl font-bold mb-6 text-center text-[#ceb75d]">
           Select Your Payment Method
         </h1>
         <div className="flex space-x-4 justify-center">
