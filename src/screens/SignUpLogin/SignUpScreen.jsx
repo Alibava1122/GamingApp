@@ -80,7 +80,7 @@ function SignUpScreen() {
         className="absolute inset-0 bg-black opacity-50"
         onClick={closeSignUp}
       ></div>
-      <div className="bg-black p-8 rounded-lg shadow-lg w-full max-w-md z-10 border border-zinc-500">
+      <div className="bg-black p-8 rounded-lg shadow-lg w-full max-w-md z-10 border border-[#ceb75d">
         <div className="mb-5 text-center">
           <p className="font-bold text-white text-xl">Gaming Pro App</p>
         </div>
@@ -106,7 +106,7 @@ function SignUpScreen() {
                   Username
                 </label>
                 <Field
-                  className="w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-zinc-500 focus:border-zinc-500 placeholder:text-[13px]"
+                  className="w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-[#ceb75d] focus:border-[#ceb75d] placeholder:text-[13px]"
                   name="username"
                   type="text"
                   as={InputField}
@@ -126,7 +126,7 @@ function SignUpScreen() {
                   Email Address
                 </label>
                 <Field
-                  className="w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-zinc-500 focus:border-zinc-500 placeholder:text-[13px]"
+                  className="w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-[#ceb75d] focus:border-[#ceb75d] placeholder:text-[13px]"
                   name="email"
                   type="email"
                   as={InputField}
@@ -146,7 +146,7 @@ function SignUpScreen() {
                   Password
                 </label>
                 <Field
-                  className="w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-zinc-500 focus:border-zinc-500 placeholder:text-[13px]"
+                  className="w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-[#ceb75d] focus:border-[#ceb75d] placeholder:text-[13px]"
                   name="password"
                   type="password"
                   as={InputField}
@@ -166,7 +166,7 @@ function SignUpScreen() {
                   Confirm Password
                 </label>
                 <Field
-                  className="w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-zinc-500 focus:border-zinc-500 placeholder:text-[13px]"
+                  className="w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-[#ceb75d] focus:border-[#ceb75d] placeholder:text-[13px]"
                   name="confirmPassword"
                   type="password"
                   as={InputField}
@@ -188,7 +188,7 @@ function SignUpScreen() {
                 <Field
                   as="select"
                   name="adminId"
-                  className="w-full h-[40px] px-3 py-2 border text-[13px] text-zinc-500  rounded-lg focus:outline-none focus:ring-2 focus:ring-zinc-500 focus:border-zinc-500 "
+                  className="w-full h-[40px] px-3 py-2 border text-[13px] text-gray-400  rounded-lg focus:outline-none focus:ring-2 focus:ring-[#ceb75d] focus:border-[#ceb75d] "
                 >
                   <option value="" disabled>
                     Select Admin

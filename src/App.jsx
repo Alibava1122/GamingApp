@@ -8,17 +8,19 @@ import SignUpScreen from './screens/SignUpLogin/SignUpScreen';
 import LoginScreen from './screens/SignUpLogin/LoginScreen';
 import PaymentScreen from './screens/PaymentScreen';
 import { store } from './redux/store';
+import OnBoardingScreen from './screens/OnBoardingScreen';
 
 function App() {
   const location = useLocation();
-  const hideNavbarRoutes = ['/login', '/signup']; 
+  const hideNavbarRoutes = ['/login', '/signup' , '/']; 
 
   return (
     <>
       {!hideNavbarRoutes.includes(location.pathname) && <Navbar />}
 
       <Routes>
-        <Route path="/" element={<MainScreen />} />
+      <Route path="/" element={<OnBoardingScreen/>} />
+        <Route path="/MainScreen" element={<MainScreen />} />
         <Route path="/About" element={<About />} />
         <Route path="/Services" element={<Services />} />
         <Route path="/payments" element={<PaymentScreen />} />

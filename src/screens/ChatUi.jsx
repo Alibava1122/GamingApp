@@ -78,9 +78,9 @@ function ChatUi() {
   return (
     <div className="bg-white p-4 w-96 max-w-lg h-110 rounded-lg shadow-lg mb-2 ">
       <div className="flex justify-between items-center mb-2 ">
-        <h3 className="font-semibold text-gray-700 text-sm">Chat with us</h3>
+        <h3 className="font-semibold text-[#ceb75d] text-sm">Chat with us</h3>
         <button
-          className="text-gray-500 hover:text-gray-700"
+          className="text-[#ceb75d] hover:text-[#554f38]"
           onClick={()=>{dispatch(hideChatModal())}}
         >
           ✕
@@ -91,7 +91,7 @@ function ChatUi() {
           <div
             key={index}
             className={`p-2 rounded-lg ${
-              msg.senderId === userInfo?.user._id ? 'bg-gray-500 text-white self-start' : 'bg-gray-100 self-end'
+              msg.senderId === userInfo?.user._id ? 'bg-[#ceb75d] text-white self-start' : 'bg-[#f3d86c] self-end'
             }`}
           >
             <p className="text-sm">{msg.message}</p>
@@ -103,12 +103,12 @@ function ChatUi() {
           type="text"
           value={newMessage}
           onChange={(e) => setNewMessage(e.target.value)}
-          className="w-full px-3 py-2 mt-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-gray-500 placeholder:text-[14px]"
+          className="w-full px-3 py-2 mt-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-[#ceb75d] placeholder:text-[14px]"
           placeholder="Type a message..."
         />
         <button
           onClick={sendMessage}
-          className="bg-gray-600 hover:bg-slate-500 px-1 py-1 rounded-lg text-white h-[40px] mt-2 ml-2  text-sm"
+          className="bg-[#ceb75d] hover:bg-[#8a7f53] px-1 py-1 rounded-lg text-zinc-800 font-semibold h-[40px] mt-2 ml-2  text-sm"
         >
           Send
         </button>

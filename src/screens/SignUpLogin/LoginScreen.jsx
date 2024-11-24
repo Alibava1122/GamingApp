@@ -106,7 +106,7 @@ function LoginScreen({ closeLogin, }) {
                       Email Address
                     </label>
                     <Field
-                      className="w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-zinc-500 focus:border-zinc-500 placeholder:text-[13px]"
+                      className="w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-[#ceb75d] focus:border-[#ceb75d] placeholder:text-[13px]"
                       name="email"
                       type="email"
                       as={InputField}
@@ -126,7 +126,7 @@ function LoginScreen({ closeLogin, }) {
                       Password
                     </label>
                     <Field
-                      className="w-full px-3 py-2  border rounded-lg focus:outline-none focus:ring-2 focus:ring-zinc-500 focus:border-zinc-500 placeholder:text-[13px]"
+                      className="w-full px-3 py-2  border rounded-lg focus:outline-none focus:ring-2 focus:ring-[#ceb75d] focus:border-[#ceb75d] placeholder:text-[13px]"
                       name="password"
                       type="password"
                       as={InputField}
@@ -147,7 +147,7 @@ function LoginScreen({ closeLogin, }) {
                       Referral code
                     </label>
                     <Field
-                      className="w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-zinc-500 focus:border-zinc-500 placeholder:text-[13px]"
+                      className="w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-[#ceb75d] focus:border-[#ceb75d] placeholder:text-[13px]"
                       name="RefCode"
                       type="RefCode"
                       as={InputField}
